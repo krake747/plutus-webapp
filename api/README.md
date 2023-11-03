@@ -13,4 +13,4 @@ Plutus Web App created with Go and Typescript
 ## Start the web api
 
 - Using your terminal execute the npm script `go run .`
-- Open the web api on <http://localhost:8080/>
+- Open the web api on <http://localhost:3001/>
