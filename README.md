@@ -1,2 +1,3 @@
 # plutus-webapp
-Plutus Web App
+
+Plutus Web App created with Typescript and [...]
