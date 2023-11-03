@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -27,8 +28,17 @@ func getAllBikes(c *gin.Context) {
 
 func main() {
 	router := gin.Default()
-	router.GET("/", getGreeting)
+	router.Use(cors.Default())
+	router.GET("/hello", getGreeting)
 	router.GET("/api/bikes", getAllBikes)
 
-	router.Run("localhost:8080")
+	// router.Use(cors.New(cors.Config{
+	// 	AllowOrigins:     []string{"http://localhost:3000"},
+	// 	AllowMethods:     []string{"GET", "POST", "PUT", "PATCH", "DELETE", "HEAD"},
+	// 	AllowHeaders:     []string{"Origin", "Content-Length", "Content-Type", "Authorization"},
+	// 	ExposeHeaders:    []string{"Content-Length"},
+	// 	AllowCredentials: true,
+	// 	MaxAge:           12 * time.Hour,
+	// }))
+	router.Run("localhost:3001")
 }
