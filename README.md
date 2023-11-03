@@ -4,8 +4,8 @@ Plutus Web App created with Typescript and [...]
 
 ## Run Web Application
 
-1. Start the Go web api
-2. Start the Web App
+1. In the first terminal start the Go web api
+2. In the second terminal Start the Web App
 3. Go to <http://localhost:3000>
 
 ## VS Code Workspace
